@@ -18,6 +18,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* messagingAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* messagingAppTests.m */; };
 		3540EDDAF7339C0462DC95E2 /* libPods-messagingApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF25D6BDE5DAC9D6E5A44C1 /* libPods-messagingApp-tvOS.a */; };
+		ADB8C82023193CFD004E576B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADB8C81F23193CFD004E576B /* GoogleService-Info.plist */; };
 		CBC094B978C6B7FB2AFABE3F /* libPods-messagingApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89818AFEA6AEA947F060F201 /* libPods-messagingApp.a */; };
 		FC8D8F3230959DF35F4530BD /* libPods-messagingApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F33285A80DE6E4F586C58AB5 /* libPods-messagingApp-tvOSTests.a */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		72908EEB0D2E434545B9DC57 /* Pods-messagingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-messagingApp.debug.xcconfig"; path = "Target Support Files/Pods-messagingApp/Pods-messagingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		89818AFEA6AEA947F060F201 /* libPods-messagingApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-messagingApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF4EBA8D3A8B104B2C0D1DE /* Pods-messagingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-messagingApp.release.xcconfig"; path = "Target Support Files/Pods-messagingApp/Pods-messagingApp.release.xcconfig"; sourceTree = "<group>"; };
+		ADB8C81F23193CFD004E576B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B88DE12584AA2C4F33265562 /* libPods-messagingAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-messagingAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -125,6 +127,7 @@
 		13B07FAE1A68108700A75B9A /* messagingApp */ = {
 			isa = PBXGroup;
 			children = (
+				ADB8C81F23193CFD004E576B /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -194,7 +197,6 @@
 				F378F1A5CB2EE29CFB991412 /* Pods-messagingAppTests.debug.xcconfig */,
 				5F39C5EDA89C3F7A6E8303E1 /* Pods-messagingAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -308,6 +310,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -338,6 +341,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				ADB8C82023193CFD004E576B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
