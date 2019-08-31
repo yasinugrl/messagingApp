@@ -5,6 +5,7 @@ import ReduxThunk from 'redux-thunk';
 import reducers from './src/reducers';
 import Router from './src/Router';
 
+console.disableYellowBox = true
 
 export default class App extends Component {
   render() {

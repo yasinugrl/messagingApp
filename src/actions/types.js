@@ -9,7 +9,7 @@ export const REGISTER_FAILD = 'register_faild';
 
 
 export const SAVE_USER_INFO = 'save_user_info';
-export const ROOM_INFO = 'room_info';
+export const ROOM_INFO = 'room_infoo';
 
 export const MESSAGE_ROOM_START = 'message_room_start';
 export const MESSAGE_ROOM_SUCCESS = 'message_room_success';

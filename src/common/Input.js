@@ -1,10 +1,9 @@
 import React from 'react';
-import { TextInput, Dimensions, Platform } from 'react-native';
-const { width } = Dimensions.get('window');
+import { TextInput } from 'react-native';
+import { InputStyle } from '../styles';
 
 const Input = ({ placeholder, value, onChangeText,
   secureTextEntry, inputStyl, keyboardType, ref, onFocus, onEndEditing, placeholderColor, multiline,  numberOfLines }) => {
-  const { inputStyle } = styles;
   return (
     <TextInput
       ref={ref}
@@ -13,7 +12,7 @@ const Input = ({ placeholder, value, onChangeText,
       placeholder={placeholder}
       placeholderTextColor={placeholderColor}
       autoCorrect={false}
-      style={[inputStyle, inputStyl]}
+      style={[InputStyle.inputStyle, inputStyl]}
       value={value}
       onChangeText={onChangeText}
       returnKeyType="next"
@@ -24,19 +23,6 @@ const Input = ({ placeholder, value, onChangeText,
       numberOfLines={numberOfLines}
     />
   );
-};
-
-const styles = {
-  inputStyle: {
-    color: 'black',
-    padding: Platform.OS === 'ios' ? 10 : 5,
-    fontSize: 14,
-    backgroundColor: 'white',
-    width: width - 50,
-    height: 50,
-    borderRadius: 25,
-    marginBottom: 20,
-  },
 };
 
 export { Input };

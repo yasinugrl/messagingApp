@@ -4,6 +4,7 @@ import { Button, Input } from '../../common';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
 import { register } from '../../actions';
+import {RegisterStyle } from '../../styles';
 
 class Register extends Component {
     state = {
@@ -15,7 +16,7 @@ class Register extends Component {
     render() {
         return (
             <ScrollView contentContainerStyle={{flexGrow: 1}}>
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+            <View style={RegisterStyle.container}>
                 <Input
                     value={this.state.userName}
                     onChangeText={(userName) => this.setState({ userName })}

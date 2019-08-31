@@ -5,6 +5,7 @@ import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
 import { login } from '../../actions';
 import { SAVE_USER_INFO } from '../../actions/types'
+import { LoginStyle } from '../../styles';
 
 class Login extends Component {
     state = {
@@ -27,7 +28,7 @@ class Login extends Component {
 
     render() {
         return (
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <View style={LoginStyle.container}>
 
                 <Input
                     value={this.state.email}
@@ -49,7 +50,7 @@ class Login extends Component {
                     isLoading={this.props.loading}
                 />
 
-                <Text>Don't have a account? <Text style={{ fontWeight: 'bold'}} onPress={() => Actions.register()}>Sign Up!</Text></Text>
+                <Text>Don't have an account? <Text style={LoginStyle.boldText} onPress={() => Actions.register()}>Sign Up!</Text></Text>
 
             </View>
         );

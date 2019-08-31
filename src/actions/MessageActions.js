@@ -13,15 +13,16 @@ export const createMessageRoom = (room, user) => {
     return dispatch => {
         dispatch({ type: MESSAGE_ROOM_START });
         firebase.database().ref('rooms').child(room).limitToLast(25).once('value').then(async (snapshot) => {
-            console.log('Gelennn:   ', snapshot.val());
             if (snapshot.val() != null) {
                 chatListen(room, dispatch);
+                Actions.message({ title: room + ' chat rooms', room });
             } else {
-                console.log('Burdada');
+
                 dispatch({ type: MESSAGE_ROOM_SUCCESS, message: room + ' creating...', room });
                 firebase.database().ref('rooms').child(room).push({ text: "Hey! this is first message. Created automaticly", createdAt: new Date(), user 
             });
                 chatListen(room, dispatch);
+                Actions.message({ title: room + ' chat rooms', room });
             }
         }).catch(error => {
             dispatch({ type: MESSAGE_FAILD });
@@ -50,10 +51,8 @@ async function chatListen(room, dispatch) {
         
         AsyncStorage.setItem(ROOM_INFO, room);
        
-        dispatch({ type: CHAT_LISTEN, payload: messages });
-        Actions.message({ title: room + ' chat rooms' });
-
-        // messages = [];
+        dispatch({ type: CHAT_LISTEN, payload: messages.reverse() });
+        messages = [];
 
     });
 }
@@ -62,7 +61,7 @@ async function chatListen(room, dispatch) {
 export const messageSend = (room, message, user) => {
     return (dispatch) => {
         if (message.trim().length >= 3) {
-            firebase.database().ref('chats').child(room).push({ text: message, createdAt: new Date(), user });
+            firebase.database().ref('rooms').child(room).push({ text: message, createdAt: new Date(), user });
         } else {
             Alert.alert('Warning!', 'You should type minimum 3-digits!');
         }
