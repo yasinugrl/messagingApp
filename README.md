@@ -10,9 +10,9 @@
 
 ## Instalition
 - 1- clone app
-- 2- npm install in terminal project directory
-- 3- react-native link
-- For IOS => go to /ios directory and run  => pod install
+- 2- `npm install` in terminal project directory
+- 3- `react-native link`
+- For IOS => go to /ios directory and run  => `pod install`
 
 ### Usage Libraries
 * [React Native Router flux](https://github.com/aksonov/react-native-router-flux)
