@@ -16,10 +16,6 @@ class RouterPage extends Component {
                 key="root"
                 transitionConfig={() => ({ screenInterpolator: StackViewStyleInterpolator.forHorizontal })} // this is requirede for horizontal push on android
                 >
-                    {/* <Scene
-                            key="message"
-                            component={MessagePage}
-                            title='Message Page' initial/> */}
 
                     <Scene hideNavBar key="onboarding">
                         <Scene key="login"
